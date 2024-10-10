@@ -41,6 +41,6 @@ mern-app/
 │   └── package.json       # Frontend dependencies
 │
 ├── README.md              # Project documentation
-└── .env                   # Environment variables
+└── package.json                   # Environment variables
 
 
