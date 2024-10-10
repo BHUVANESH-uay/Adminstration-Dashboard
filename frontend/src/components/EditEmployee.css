@@ -1,0 +1,61 @@
+.edit-employee-container {
+    max-width: 500px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.edit-employee-form {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.form-input, .form-file, .submit-button {
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.form-input:focus, .form-file:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+.gender-group, .course-group {
+    margin: 10px 0; 
+}
+
+.gender-label, .course-label {
+    font-size: 16px; 
+    margin-bottom: 5px; 
+}
+
+.form-radio, .form-checkbox {
+    margin-right: 5px; 
+}
+
+.submit-button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+@media (max-width: 768px) {
+    .edit-employee-container {
+        width: 100%; 
+    }
+
+    .form-input, .form-file, .submit-button {
+        padding: 10px; 
+    }
+}
