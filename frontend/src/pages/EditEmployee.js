@@ -145,21 +145,21 @@ const EditEmployee = () => {
                         value="Course 1"
                         checked={formData.course.includes('Course 1')}
                         onChange={handleCourseChange}
-                    /> Course 1
+                    /> BSC
                     <input
                         className="form-checkbox"
                         type="checkbox"
                         value="Course 2"
                         checked={formData.course.includes('Course 2')}
                         onChange={handleCourseChange}
-                    /> Course 2
+                    /> BA
                     <input
                         className="form-checkbox"
                         type="checkbox"
                         value="Course 3"
                         checked={formData.course.includes('Course 3')}
                         onChange={handleCourseChange}
-                    /> Course 3
+                    /> MSC
                 </div>
                 <div>
                     <label>Upload New Image:</label>
