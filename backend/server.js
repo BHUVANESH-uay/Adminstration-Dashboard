@@ -118,34 +118,37 @@ app.delete('/api/employees/:id', async (req, res) => {
     }
 });
 
-app.put('/api/employees/email/:email', upload.single('image'), async (req, res) => {
+app.put('/api/employees/:id', upload.single('image'), async (req, res) => {
     const { name, mobileNo, designation, gender, course } = req.body;
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : undefined;
+    const imageUrl = req.file ? `/uploads/${req.file.filename}` : undefined; // Handle the uploaded image
 
     try {
-        const updatedEmployee = await Employee.findOneAndUpdate(
-            { email: req.params.email },
+        // Find the employee by ID and update
+        const updatedEmployee = await Employee.findByIdAndUpdate(
+            req.params.id, // Search by ID
             {
                 name,
                 mobileNo,
                 designation,
                 gender,
                 course,
-                imageUrl
+                imageUrl // Update the imageUrl if a new image is uploaded
             },
-            { new: true }
+            { new: true } // Return the updated document
         );
 
         if (!updatedEmployee) {
-            return res.status(404).json({ message: 'Employee not found' });
+            return res.status(404).json({ message: 'Employee not found' }); // Handle not found case
         }
 
-        res.status(200).json(updatedEmployee);
+        res.status(200).json(updatedEmployee); // Respond with the updated employee
     } catch (err) {
         console.error('Error updating employee:', err);
         res.status(500).json({ message: 'Failed to update employee.', error: err.message });
     }
 });
+
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
