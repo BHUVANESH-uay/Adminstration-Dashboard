@@ -78,9 +78,9 @@ const CreateEmployee = () => {
                 
                 <div className="course-group">
                     <span className="course-label">Course:</span>
-                    <input className="form-checkbox" type="checkbox" value="Course 1" onChange={handleCourseChange} /> Course 1
-                    <input className="form-checkbox" type="checkbox" value="Course 2" onChange={handleCourseChange} /> Course 2
-                    <input className="form-checkbox" type="checkbox" value="Course 3" onChange={handleCourseChange} /> Course 3
+                    <input className="form-checkbox" type="checkbox" value="Course 1" onChange={handleCourseChange} /> BSC
+                    <input className="form-checkbox" type="checkbox" value="Course 2" onChange={handleCourseChange} /> BA
+                    <input className="form-checkbox" type="checkbox" value="Course 3" onChange={handleCourseChange} /> MSC
                 </div>
                 
                 <input className="form-file" type="file" name="image" onChange={handleFileChange} required />
